@@ -2,7 +2,7 @@ const birthdayData = {
   friendName: "chidkiii❤️😘",
   yourName: "Soham",
   birthday: "18 August",
-  music: "music/Tera Yaar Hoon Main 8K Video _ Arijit Singh _ Kartik Aaryan _ Sonu Ke Titu Ki Sweety _ Rochak Kohli (1).mp3",
+  music: "music/birthdaysong.mp3",
   photos: [
     { src: "images/photo 1.jpg", caption: "The photo that still makes me smile." },
     { src: "images/photo 2.jpg", caption: "A little moment, a forever memory." },
