@@ -24,6 +24,16 @@ const birthdayData = {
     { icon: "☾", text: "The comfortable silence that never felt awkward." },
     { icon: "☆", text: "All the tiny things that made this friendship feel rare." }
   ],
+  specialReasons: [
+    "Best smile",
+    "Cute chaos",
+    "Always special",
+    "Forever memory",
+    "Too much attitude",
+    "Pure heart",
+    "Favorite human",
+    "Unlimited bakchodi"
+  ],
   surpriseNotes: [
     "You make normal days feel a little more special.",
     "Your laugh is honestly one of my favorite sounds.",
@@ -268,6 +278,7 @@ const musicToggle = $("#musicToggle");
 const music = $("#birthdayMusic");
 const gallery = $("#gallery");
 const memoryCards = $("#memoryCards");
+const reasonsStrip = $("#reasonsStrip");
 const timelineList = $("#timelineList");
 const lightbox = $("#lightbox");
 const lightboxImage = $("#lightboxImage");
@@ -334,6 +345,14 @@ function renderCards() {
       <span class="memory-icon">${item.icon}</span>
       <p>${item.text}</p>
     </article>
+  `).join("");
+}
+
+function renderReasons() {
+  if (!reasonsStrip) return;
+
+  reasonsStrip.innerHTML = birthdayData.specialReasons.map((reason, index) => `
+    <span class="reason-pill" style="--delay: ${index * 0.08}s">${reason}</span>
   `).join("");
 }
 
@@ -580,6 +599,7 @@ function init() {
   applyPersonalization();
   renderGallery();
   renderCards();
+  renderReasons();
   renderTimeline();
   revealOnScroll();
   setupNavigation();

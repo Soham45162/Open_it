@@ -632,6 +632,34 @@ h3 {
   line-height: 1.65;
 }
 
+.reasons-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2.4rem auto 0;
+  width: min(54rem, 100%);
+}
+
+.reason-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.65rem;
+  padding: 0.68rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  color: #4d3d68;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 240, 246, 0.62)),
+    radial-gradient(circle at top left, rgba(255, 217, 140, 0.3), transparent 4rem);
+  box-shadow: 0 14px 32px rgba(91, 62, 142, 0.1);
+  font-size: 0.92rem;
+  font-weight: 700;
+  animation: softBob 3.2s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
 .surprise-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr 1fr;
@@ -1147,6 +1175,12 @@ h3 {
   }
 }
 
+@keyframes softBob {
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
 @media (max-width: 900px) {
   .site-nav {
     top: 4.5rem;
@@ -1207,7 +1241,26 @@ h3 {
 
 @media (max-width: 640px) {
   .section {
-    padding-inline: 0.9rem;
+    min-height: auto;
+    padding: 4.2rem 0.9rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .memories-section {
+    padding-top: 4.8rem;
+  }
+
+  .wish-section {
+    min-height: auto;
+    padding-bottom: 5.8rem;
+  }
+
+  .section-heading p {
+    font-size: 0.98rem;
+    line-height: 1.65;
   }
 
   .welcome-card,
@@ -1218,6 +1271,57 @@ h3 {
   .gallery,
   .memory-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery,
+  .memory-card-grid,
+  .surprise-grid,
+  .timeline,
+  .letter-paper {
+    margin-top: 2rem;
+  }
+
+  .memory-card {
+    min-height: auto;
+    padding: 1.2rem;
+  }
+
+  .reasons-strip {
+    justify-content: flex-start;
+    gap: 0.6rem;
+    margin-top: 1.8rem;
+  }
+
+  .reason-pill {
+    min-height: 2.35rem;
+    padding: 0.58rem 0.82rem;
+    font-size: 0.84rem;
+  }
+
+  .surprise-envelope,
+  .wish-jar,
+  .promise-card {
+    min-height: auto;
+  }
+
+  .wish-jar {
+    padding: 1.45rem 1.15rem;
+  }
+
+  .jar-glass {
+    min-height: 10.5rem;
+  }
+
+  .promise-card {
+    padding: 1.4rem;
+  }
+
+  .letter-paper {
+    min-height: auto;
+  }
+
+  .final-wish {
+    padding: 1.6rem 1.15rem;
   }
 
   .photo-card:nth-child(n) {
